@@ -1,521 +1,372 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Meryem Teljaoui — Portfolio</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@400;600;700&display=swap" rel="stylesheet" />
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Meryem Teljaoui | Étudiante Audit &amp; Contrôle | Portfolio</title>
+<meta name="description" content="Portfolio de Meryem Teljaoui, étudiante en 5e année Audit &amp; Contrôle à l'ENCG Oujda, à la recherche d'un stage PFE en audit financier.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%2314284b'/><text x='50' y='66' font-size='46' text-anchor='middle' fill='white' font-family='Georgia,serif' font-weight='bold'>MT</text></svg>">
 
-    :root {
-      --purple-50: #EEEDFE;
-      --purple-200: #AFA9EC;
-      --purple-500: #534AB7;
-      --purple-800: #3C3489;
-      --teal-50: #E1F5EE;
-      --teal-500: #0F6E56;
-      --teal-800: #085041;
-      --gray-100: #F5F4F2;
-      --gray-200: #E8E6E1;
-      --gray-400: #9B9890;
-      --gray-800: #2C2C2A;
-      --white: #FFFFFF;
-      --text-primary: #1A1A18;
-      --text-secondary: #6B6A65;
-      --radius-sm: 8px;
-      --radius-md: 12px;
-      --radius-lg: 18px;
-    }
+<!--
+  ============================================================
+  À REMPLACER AVANT DE PUBLIER (cherche les crochets [ ] et "VOTRE")
+  1. [MOIS 2027]            -> ta date de disponibilité
+  2. VOTRE-PROFIL           -> ton identifiant LinkedIn
+  3. [X]                    -> tes vrais chiffres (n'invente rien)
+  4. CV_Teljaoui_Meryem_Audit_PFE.pdf -> dépose ce fichier dans le même dossier que index.html
+  5. Supprime les mentions entre crochets que tu ne peux pas prouver
+  ============================================================
+-->
 
-    html { scroll-behavior: smooth; }
+<style>
+  :root{
+    --ink:#14284b;
+    --text:#26324a;
+    --muted:#5b6679;
+    --line:#d5dbe6;
+    --paper:#ffffff;
+    --wash:#f1f4f9;
+    --blue:#1a4b8c;
+    --blue-dark:#123766;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth;scroll-padding-top:72px}
+  body{
+    margin:0;background:var(--paper);color:var(--text);
+    font:17px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  }
+  h1,h2,h3{font-family:"Iowan Old Style","Palatino Linotype",Georgia,serif;color:var(--ink);line-height:1.2;margin:0}
+  a{color:var(--blue)}
+  a:focus-visible,.btn:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+  .wrap{max-width:980px;margin:0 auto;padding:0 24px}
 
-    body {
-      font-family: 'Inter', sans-serif;
-      background: var(--gray-100);
-      color: var(--text-primary);
-      min-height: 100vh;
-      font-size: 15px;
-      line-height: 1.6;
-    }
+  /* Navigation */
+  header.top{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.96);border-bottom:1px solid var(--line)}
+  header.top .wrap{display:flex;align-items:center;justify-content:space-between;min-height:60px;flex-wrap:wrap;gap:8px}
+  .logo{font-family:Georgia,serif;font-weight:700;font-size:1.25rem;color:var(--ink);text-decoration:none}
+  nav a{margin-left:20px;text-decoration:none;color:var(--text);font-size:.95rem}
+  nav a:hover{color:var(--blue);text-decoration:underline}
 
-    /* ── Nav ── */
-    nav {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: rgba(245, 244, 242, 0.85);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--gray-200);
-      padding: 0 2rem;
-      height: 56px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    .nav-logo {
-      font-family: 'Sora', sans-serif;
-      font-weight: 700;
-      font-size: 16px;
-      color: var(--purple-800);
-      letter-spacing: -0.02em;
-    }
-    .nav-links { display: flex; gap: 1.5rem; list-style: none; }
-    .nav-links a {
-      font-size: 13px;
-      color: var(--text-secondary);
-      text-decoration: none;
-      font-weight: 500;
-      transition: color 0.2s;
-    }
-    .nav-links a:hover { color: var(--purple-500); }
+  /* Hero */
+  .hero{padding:72px 0 56px;border-bottom:1px solid var(--line)}
+  .hero h1{font-size:clamp(2.4rem,6vw,4rem);letter-spacing:-.01em}
+  .hero .role{font-size:1.25rem;color:var(--ink);margin:14px 0 6px;font-weight:600}
+  .hero .avail{color:var(--muted);margin:0 0 28px;max-width:60ch}
+  .btns{display:flex;gap:12px;flex-wrap:wrap}
+  .btn{display:inline-block;padding:12px 22px;border-radius:6px;text-decoration:none;font-weight:600;border:2px solid var(--blue)}
+  .btn.primary{background:var(--blue);color:#fff}
+  .btn.primary:hover{background:var(--blue-dark);border-color:var(--blue-dark)}
+  .btn.ghost{color:var(--blue);background:transparent}
+  .btn.ghost:hover{background:var(--wash)}
 
-    /* ── Layout ── */
-    main {
-      max-width: 860px;
-      margin: 0 auto;
-      padding: 3rem 1.5rem 5rem;
-      display: flex;
-      flex-direction: column;
-      gap: 2.5rem;
-    }
+  /* Sections */
+  section{padding:56px 0;border-bottom:1px solid var(--line)}
+  section h2{font-size:1.9rem;margin-bottom:22px}
+  .lead{max-width:68ch;margin:0}
 
-    /* ── Hero ── */
-    .hero {
-      background: var(--white);
-      border: 1px solid var(--gray-200);
-      border-radius: var(--radius-lg);
-      padding: 2.5rem;
-      display: flex;
-      align-items: center;
-      gap: 2rem;
-      position: relative;
-      overflow: hidden;
-    }
-    .hero::before {
-      content: '';
-      position: absolute;
-      top: -60px; right: -60px;
-      width: 220px; height: 220px;
-      background: var(--purple-50);
-      border-radius: 50%;
-      pointer-events: none;
-    }
-    .avatar {
-      width: 80px; height: 80px;
-      border-radius: 50%;
-      background: var(--purple-50);
-      border: 2px solid var(--purple-200);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: 'Sora', sans-serif;
-      font-size: 24px;
-      font-weight: 700;
-      color: var(--purple-800);
-      flex-shrink: 0;
-      position: relative;
-      z-index: 1;
-    }
-    .hero-text { position: relative; z-index: 1; }
-    .hero-text h1 {
-      font-family: 'Sora', sans-serif;
-      font-size: 26px;
-      font-weight: 700;
-      color: var(--text-primary);
-      letter-spacing: -0.03em;
-      margin-bottom: 4px;
-    }
-    .hero-text .subtitle {
-      font-size: 14px;
-      color: var(--text-secondary);
-      margin-bottom: 14px;
-    }
-    .badge-row { display: flex; flex-wrap: wrap; gap: 6px; }
-    .badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
-      font-size: 12px;
-      font-weight: 500;
-      padding: 4px 12px;
-      border-radius: 20px;
-    }
-    .badge-purple { background: var(--purple-50); color: var(--purple-800); }
-    .badge-teal   { background: var(--teal-50);   color: var(--teal-800); }
-    .badge svg { width: 12px; height: 12px; }
+  /* Expérience */
+  .job{display:grid;grid-template-columns:190px 1fr;gap:8px 28px;padding:20px 0;border-top:1px solid var(--line)}
+  .job:first-of-type{border-top:0}
+  .job .when{color:var(--muted);font-size:.95rem}
+  .job h3{font-size:1.15rem}
+  .job .org{color:var(--muted);margin:2px 0 8px}
+  .job ul{margin:0;padding-left:20px}
+  .job li{margin:4px 0;max-width:68ch}
 
-    /* ── Section ── */
-    section {
-      background: var(--white);
-      border: 1px solid var(--gray-200);
-      border-radius: var(--radius-lg);
-      padding: 2rem 2.5rem;
-    }
-    .section-label {
-      font-size: 11px;
-      font-weight: 600;
-      letter-spacing: 0.09em;
-      text-transform: uppercase;
-      color: var(--gray-400);
-      margin-bottom: 1.25rem;
-    }
+  /* Compétences */
+  .skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:0;border:1px solid var(--line)}
+  .skill{padding:18px 20px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);margin:-0px -1px -1px 0}
+  .skill h3{font-size:1.05rem;margin-bottom:6px}
+  .skill p{margin:0;color:var(--muted);font-size:.95rem}
 
-    /* ── About ── */
-    .about-text {
-      font-size: 15px;
-      color: var(--text-secondary);
-      line-height: 1.75;
-      max-width: 600px;
-    }
+  /* Projets : présentés comme une feuille de travail */
+  .ledger{border:1px solid var(--line);border-radius:4px;overflow:hidden}
+  .row{display:grid;grid-template-columns:1.1fr 1.6fr .9fr;gap:8px 24px;padding:22px 24px;border-top:1px solid var(--line)}
+  .row:first-child{border-top:0}
+  .row:nth-child(even){background:var(--wash)}
+  .row h3{font-size:1.1rem}
+  .row .ctx{display:block;color:var(--muted);font-size:.9rem;margin-top:4px;font-family:system-ui,sans-serif;font-weight:400}
+  .row ul{margin:0;padding-left:18px}
+  .row li{margin:3px 0}
+  .meta dt{font-weight:600;font-size:.85rem;color:var(--ink)}
+  .meta dd{margin:0 0 8px;font-size:.92rem;color:var(--muted)}
+  .note{margin-top:14px;font-size:.9rem;color:var(--muted);max-width:68ch}
 
-    /* ── Skills ── */
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-      gap: 10px;
-    }
-    .skill-card {
-      background: var(--gray-100);
-      border: 1px solid var(--gray-200);
-      border-radius: var(--radius-sm);
-      padding: 12px 16px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      transition: border-color 0.2s, background 0.2s;
-      cursor: default;
-    }
-    .skill-card:hover {
-      border-color: var(--purple-200);
-      background: var(--purple-50);
-    }
-    .skill-icon {
-      width: 32px; height: 32px;
-      border-radius: var(--radius-sm);
-      background: var(--white);
-      display: flex; align-items: center; justify-content: center;
-      flex-shrink: 0;
-    }
-    .skill-icon svg { width: 18px; height: 18px; }
-    .skill-name { font-size: 13px; font-weight: 500; color: var(--text-primary); }
+  /* Formation */
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:32px}
+  .two h3{font-size:1.15rem;margin-bottom:8px}
+  .two ul{margin:0;padding-left:20px}
 
-    /* ── Projects ── */
-    .projects-list { display: flex; flex-direction: column; gap: 12px; }
-    .project-card {
-      border: 1px solid var(--gray-200);
-      border-radius: var(--radius-md);
-      padding: 1.25rem 1.5rem;
-      display: flex;
-      align-items: flex-start;
-      gap: 14px;
-      transition: border-color 0.2s, box-shadow 0.2s;
-    }
-    .project-card:hover {
-      border-color: var(--purple-200);
-      box-shadow: 0 4px 20px rgba(83,74,183,0.07);
-    }
-    .project-icon {
-      width: 42px; height: 42px;
-      border-radius: var(--radius-sm);
-      display: flex; align-items: center; justify-content: center;
-      flex-shrink: 0;
-    }
-    .project-icon svg { width: 22px; height: 22px; }
-    .icon-purple { background: var(--purple-50); }
-    .icon-teal   { background: var(--teal-50); }
-    .project-title { font-size: 14px; font-weight: 600; color: var(--text-primary); margin-bottom: 4px; }
-    .project-desc  { font-size: 13px; color: var(--text-secondary); line-height: 1.6; }
-    .project-tag {
-      display: inline-block;
-      margin-top: 8px;
-      font-size: 11px;
-      font-weight: 500;
-      padding: 2px 9px;
-      border-radius: 20px;
-      background: var(--gray-100);
-      color: var(--gray-400);
-      border: 1px solid var(--gray-200);
-    }
+  /* Contact */
+  .contact p{margin:6px 0}
+  .contact .big{font-size:1.1rem}
+  footer{padding:28px 0;color:var(--muted);font-size:.9rem}
 
-    /* ── Contact ── */
-    .contact-grid { display: flex; flex-wrap: wrap; gap: 10px; }
-    .contact-item {
-      display: flex;
-      align-items: center;
-      gap: 9px;
-      background: var(--gray-100);
-      border: 1px solid var(--gray-200);
-      border-radius: var(--radius-sm);
-      padding: 10px 16px;
-      font-size: 13px;
-      font-weight: 500;
-      color: var(--text-primary);
-      text-decoration: none;
-      transition: border-color 0.2s, background 0.2s;
-      cursor: pointer;
-    }
-    .contact-item:hover { background: var(--purple-50); border-color: var(--purple-200); color: var(--purple-800); }
-    .contact-item svg { width: 16px; height: 16px; flex-shrink: 0; }
-
-    /* ── Footer ── */
-    footer {
-      text-align: center;
-      font-size: 12px;
-      color: var(--gray-400);
-      padding-top: 1rem;
-    }
-
-    /* ── Fade-in animation ── */
-    .fade-in {
-      opacity: 0;
-      transform: translateY(18px);
-      transition: opacity 0.5s ease, transform 0.5s ease;
-    }
-    .fade-in.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* ── Responsive ── */
-    @media (max-width: 600px) {
-      .hero { flex-direction: column; text-align: center; padding: 1.75rem; }
-      .hero::before { display: none; }
-      .badge-row { justify-content: center; }
-      section { padding: 1.5rem; }
-      main { padding: 1.5rem 1rem 4rem; gap: 1.5rem; }
-      nav { padding: 0 1rem; }
-      .nav-links { display: none; }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      .fade-in { opacity: 1; transform: none; transition: none; }
-    }
-  </style>
+  @media (max-width:760px){
+    nav a{margin:0 14px 0 0}
+    .job{grid-template-columns:1fr}
+    .row{grid-template-columns:1fr}
+    .two{grid-template-columns:1fr}
+    .hero{padding:48px 0 40px}
+  }
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
 </head>
+
 <body>
 
-  <!-- Nav -->
-  <nav>
-    <span class="nav-logo">MT.</span>
-    <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#accueil">MT</a>
+    <nav aria-label="Navigation principale">
+      <a href="#apropos">À propos</a>
+      <a href="#experience">Expérience</a>
+      <a href="#competences">Compétences</a>
+      <a href="#projets">Projets</a>
+      <a href="#formation">Formation</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
 
-  <main>
+<main>
 
-    <!-- Hero -->
-    <div class="hero fade-in">
-      <div class="avatar">MT</div>
-      <div class="hero-text">
-        <h1>Meryem Teljaoui</h1>
-        <p class="subtitle">Audit & Control Student · ENCG Oujda · Seeking internship for my PFE </p>
-        <div class="badge-row">
-          <span class="badge badge-purple">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 14l9-5-9-5-9 5 9 5z"/><path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/></svg>
-            5th year
-          </span>
-          <span class="badge badge-teal">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            Marrakech
-          </span>
+  <!-- ACCUEIL -->
+  <div class="hero" id="accueil">
+    <div class="wrap">
+      <h1>Meryem Teljaoui</h1>
+      <p class="role">Étudiante en 5<sup>e</sup> année Audit &amp; Contrôle, ENCG Oujda</p>
+      <p class="avail">Je recherche un stage PFE de 6 mois en audit financier, à partir de [MOIS 2027]. Basée à Marrakech, mobile à Casablanca.</p>
+      <div class="btns">
+        <a class="btn primary" href="CV_Teljaoui_Meryem_Audit_PFE.pdf" download>Télécharger mon CV</a>
+        <a class="btn ghost" href="#contact">Me contacter</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- À PROPOS -->
+  <section id="apropos">
+    <div class="wrap">
+      <h2>À propos</h2>
+      <p class="lead">Étudiante en 5<sup>e</sup> année Audit &amp; Contrôle à l'ENCG Oujda, j'ai effectué trois stages (cabinet comptable, Direction Générale des Impôts, FRITAM) et fondé le Club ORCA, dédié à l'audit, au contrôle et à la conformité.</p>
+      <p class="lead">Je maîtrise l'approche par les risques, le contrôle interne (référentiel COSO) et l'analyse de données sous Excel et Power BI. Je cherche un stage PFE en audit financier pour participer à des missions de revue analytique, de leadsheets et de circularisations.</p>
+    </div>
+  </section>
+
+  <!-- EXPÉRIENCE -->
+  <section id="experience">
+    <div class="wrap">
+      <h2>Expérience</h2>
+
+      <div class="job">
+        <div class="when">Juin – août 2026</div>
+        <div>
+          <h3>Stage d'approfondissement</h3>
+          <p class="org">FRITAM, société exportatrice de fruits et légumes frais et congelés</p>
+          <ul>
+            <li>Cartographie des procédures [achats / stocks / trésorerie : garde seulement celles que tu as vues] et identification de [X] risques de contrôle interne.</li>
+            <li>Étude des pratiques de contrôle et de suivi documentaire sur les opérations de l'entreprise.</li>
+            <li>Rédaction d'un rapport de stage appliquant une démarche d'audit fondée sur les risques.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="job">
+        <div class="when">Juillet 2025</div>
+        <div>
+          <h3>Stagiaire</h3>
+          <p class="org">Direction Générale des Impôts, Marrakech (Targa)</p>
+          <ul>
+            <li>Analyse de [X] dossiers fiscaux dans les services de l'assiette et du recouvrement.</li>
+            <li>Suivi du recouvrement des créances fiscales et des dossiers.</li>
+            <li>Application de la réglementation fiscale marocaine.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="job">
+        <div class="when">Juillet 2024</div>
+        <div>
+          <h3>Stagiaire en comptabilité</h3>
+          <p class="org">Fiduciaire Benhassi</p>
+          <ul>
+            <li>Saisie de [X] écritures comptables sur Topaz.</li>
+            <li>Préparation de déclarations de TVA pour [X] dossiers.</li>
+            <li>Contrôle de [X] pièces justificatives et de leur conformité.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="job">
+        <div class="when">Depuis [année]</div>
+        <div>
+          <h3>Fondatrice et présidente</h3>
+          <p class="org">Club ORCA, ENCG Oujda (audit, contrôle et conformité)</p>
+          <ul>
+            <li>Création et animation du club : [X] membres, [X] ateliers, [X] visites professionnelles.</li>
+            <li>Échanges avec des professionnels du secteur : [cabinets / entreprises, si tu peux les citer].</li>
+          </ul>
         </div>
       </div>
     </div>
+  </section>
 
-    <!-- About -->
-    <section id="about" class="fade-in">
-      <p class="section-label">About</p>
-      <p class="about-text">
-        I am a fifth-year Audit & Control student at ENCG Oujda, passionate about financial auditing. I am currently looking for an internship  to put my academic knowledge into practice and contribute to a professional team.
-      </p>
-    </section>
-
-    <!-- Skills -->
-    <section id="skills" class="fade-in">
-      <p class="section-label">Skills</p>
-      <div class="skills-grid">
-
-        <div class="skill-card">
-          <div class="skill-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#534AB7" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
-          </div>
-          <span class="skill-name">Excel advanced</span>
+  <!-- COMPÉTENCES -->
+  <section id="competences">
+    <div class="wrap">
+      <h2>Compétences</h2>
+      <div class="skills">
+        <div class="skill">
+          <h3>Audit et contrôle interne</h3>
+          <p>Approche par les risques, assertions d'audit, matérialité, référentiel COSO, matrices de risques.</p>
         </div>
-
-        <div class="skill-card">
-          <div class="skill-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#534AB7" stroke-width="1.8"><path d="M9 7H6a2 2 0 00-2 2v9a2 2 0 002 2h9a2 2 0 002-2v-3"/><path d="M9 15h3l8.5-8.5a1.5 1.5 0 00-3-3L9 12v3"/></svg>
-          </div>
-          <span class="skill-name">Accounting</span>
+        <div class="skill">
+          <h3>Cycles étudiés</h3>
+          <p>Trésorerie, immobilisations, capitaux propres. Revue analytique et documentation des tests.</p>
         </div>
-
-        <div class="skill-card">
-          <div class="skill-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#534AB7" stroke-width="1.8"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
-          </div>
-          <span class="skill-name">Audit basics</span>
+        <div class="skill">
+          <h3>Excel</h3>
+          <p>Tableaux croisés dynamiques, RECHERCHEX, [ajoute seulement ce que tu sais faire].</p>
         </div>
-
-        <div class="skill-card">
-          <div class="skill-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#534AB7" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
-          </div>
-          <span class="skill-name">Power BI</span>
+        <div class="skill">
+          <h3>Power BI</h3>
+          <p>Tableau de bord d'indicateurs d'audit et de risques (voir projets).</p>
         </div>
-
-        <div class="skill-card">
-          <div class="skill-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#534AB7" stroke-width="1.8"><path d="M3 3v18h18"/><path d="M18 17V9M13 17V5M8 17v-3"/></svg>
-          </div>
-          <span class="skill-name">Financial analysis</span>
+        <div class="skill">
+          <h3>Comptabilité et fiscalité</h3>
+          <p>Topaz, saisie comptable, TVA, [CGNC si maîtrisé].</p>
         </div>
-
-        <div class="skill-card">
-          <div class="skill-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#534AB7" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93l-1.41 1.41M5.34 5.34L3.93 6.75M21 12h-2M5 12H3M19.07 19.07l-1.41-1.41M5.34 18.66l-1.41 1.41M12 19v2M12 3v2"/></svg>
-          </div>
-          <span class="skill-name">Internal control</span>
+        <div class="skill">
+          <h3>Langues</h3>
+          <p>Arabe (langue maternelle), anglais C1, français [ton niveau réel]. Notions : espagnol, allemand, mandarin.</p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJETS -->
+  <section id="projets">
+    <div class="wrap">
+      <h2>Projets</h2>
+      <div class="ledger">
+
+        <article class="row">
+          <h3>Analyse de processus et identification des risques
+            <span class="ctx">Cas pratique académique, [matière], [année]</span></h3>
+          <ul>
+            <li>Analyse des activités, des flux et des points de contrôle d'un processus.</li>
+            <li>Identification des risques opérationnels, financiers et de conformité, et de leur impact sur les objectifs.</li>
+          </ul>
+          <dl class="meta">
+            <dt>Livrable</dt><dd>[X] risques identifiés, schéma du processus</dd>
+            <dt>Outils</dt><dd>Excel</dd>
+          </dl>
+          <!-- Ajoute ici un lien vers ton schéma : <a href="projets/processus.pdf">Voir le schéma</a> -->
+        </article>
+
+        <article class="row">
+          <h3>Matrice des risques et dispositif de contrôle interne
+            <span class="ctx">Cas pratique académique, [année]</span></h3>
+          <ul>
+            <li>Classement des risques selon leur probabilité et leur impact.</li>
+            <li>Définition de mesures de contrôle préventives et détectives pour les risques critiques.</li>
+          </ul>
+          <dl class="meta">
+            <dt>Livrable</dt><dd>Matrice de [X] risques sur [X] niveaux de criticité</dd>
+            <dt>Outils</dt><dd>Excel</dd>
+          </dl>
+          <!-- Ajoute ici : <a href="projets/matrice-risques.png">Voir la matrice</a> -->
+        </article>
+
+        <article class="row">
+          <h3>Évaluation du contrôle interne selon COSO
+            <span class="ctx">Cas pratique académique, [année]</span></h3>
+          <ul>
+            <li>Analyse des cinq composantes : environnement de contrôle, évaluation des risques, activités de contrôle, information et communication, pilotage.</li>
+            <li>Identification des points forts et des faiblesses, et de leurs effets sur la fiabilité des processus.</li>
+          </ul>
+          <dl class="meta">
+            <dt>Livrable</dt><dd>Tableau d'évaluation des 5 composantes</dd>
+            <dt>Référentiel</dt><dd>COSO</dd>
+          </dl>
+          <!-- Ajoute ici : <a href="projets/coso.pdf">Voir le tableau</a> -->
+        </article>
+
+        <article class="row">
+          <h3>Normes ISA : application à un cas d'audit
+            <span class="ctx">Cas pratique académique, [année]</span></h3>
+          <ul>
+            <li>Application des normes ISA à un cas : évaluation des risques, contrôle interne, éléments probants, documentation, matérialité.</li>
+            <li>Rédaction de procédures d'audit adaptées aux risques identifiés.</li>
+          </ul>
+          <dl class="meta">
+            <dt>Livrable</dt><dd>[fiche de synthèse ou papier de travail]</dd>
+            <dt>Référentiel</dt><dd>Normes ISA</dd>
+          </dl>
+          <!-- Ajoute ici : <a href="projets/isa.pdf">Voir la fiche</a> -->
+        </article>
+
+        <article class="row">
+          <h3>Tableau de bord d'audit sous Power BI
+            <span class="ctx">Projet personnel, [année]</span></h3>
+          <ul>
+            <li>Visualisation d'indicateurs d'audit et de risques à partir de données [fictives ou anonymisées].</li>
+            <li>Mise en forme de visuels interactifs pour présenter des constats.</li>
+          </ul>
+          <dl class="meta">
+            <dt>Livrable</dt><dd>Tableau de bord de [X] indicateurs</dd>
+            <dt>Outils</dt><dd>Power BI</dd>
+          </dl>
+          <!-- Ajoute ici : <a href="projets/powerbi.png">Voir la capture</a> -->
+        </article>
 
       </div>
-    </section>
+      <p class="note">Les cas présentés sont académiques ou fondés sur des données fictives ou anonymisées. Aucune donnée confidentielle d'entreprise n'est publiée.</p>
+    </div>
+  </section>
 
-    <!-- Projects -->
-    <section id="projects" class="fade-in">
-      <p class="section-label">Projects</p>
-      <div class="projects-list">
-
-        <div class="project-card">
-          <div class="project-icon icon-purple">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#534AB7" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
-          </div>
-          <div>
-            <p class="project-title">Process analysis and risk identification.</p>
-            <p class="project-desc">Analyzed organizational and business processes to understand their main activities, workflows, and control points. Identified potential operational, financial, and compliance risks arising throughout the processes. Assessed the potential impact of these risks on the achievement of organizational objectives and highlighted key areas requiring stronger controls and monitoring.</p>
-          </div>
+  <!-- FORMATION -->
+  <section id="formation">
+    <div class="wrap">
+      <h2>Formation</h2>
+      <div class="two">
+        <div>
+          <h3>ENCG Oujda, Cycle Grande École</h3>
+          <p>2022 – 2027, filière Audit &amp; Contrôle</p>
+          <ul>
+            <li>Audit légal et contractuel</li>
+            <li>Contrôle interne</li>
+            <li>[Autres matières clés]</li>
+          </ul>
         </div>
-
-        <div class="project-card">
-          <div class="project-icon icon-teal">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#0F6E56" stroke-width="1.8"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
-          </div>
-          <div>
-            <p class="project-title">Risk Matrix & Internal Control Framework</p>
-            <p class="project-desc">Developed risk matrices to structure and assess identified risks based on their likelihood and potential impact. Classified risks according to their level of criticality and identified appropriate control measures. Designed control mechanisms aimed at preventing or detecting potential errors, weaknesses, and operational failures.</p>
-      
-          </div>
+        <div>
+          <h3>Baccalauréat</h3>
+          <p>Sciences Physiques, mention Très Bien, 2022</p>
         </div>
-         <div class="project-card">
-          <div class="project-icon icon-teal">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#0F6E56" stroke-width="1.8"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
-          </div>
-          <div>
-            <p class="project-title">Audit Standards & Practical Application</p>
-            <p class="project-desc">Studied the principles and requirements of International Standards on Auditing (ISAs) and explored their practical application within the audit process. Focused on key audit concepts including risk assessment, internal controls, audit evidence, documentation, materiality, and audit procedures. Applied these principles to practical academic audit cases.</p>
-      
-          </div>
-        </div>
-
-         </div>
-         <div class="project-card">
-          <div class="project-icon icon-teal">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#0F6E56" stroke-width="1.8"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
-          </div>
-          <div>
-            <p class="project-title">    Internal Control Assessment Using the COSO Framework</p>
-            <p class="project-desc">Assessed the internal control environment using the COSO framework. Analyzed key control components, including the control environment, risk assessment, control activities, information and communication, and monitoring activities. Identified control strengths and potential weaknesses and evaluated their implications for risk management and the reliability of processes.</p>
-      
-          </div>
-        </div>
-
-        </div>
-         <div class="project-card">
-          <div class="project-icon icon-teal">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#0F6E56" stroke-width="1.8"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
-          </div>
-          <div>
-            <p class="project-title">  Audit Data Visualization with Power BI</p>
-            <p class="project-desc">Used Power BI at a beginner level to explore and visualize audit- and risk-related data. Created basic dashboards and visualizations to present key indicators and make information easier to understand. Practiced data organization, simple data analysis, and the creation of interactive visuals to support the presentation of audit findings.</p>
-      
-          </div>
-        </div>
-    
-
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Contact -->
-    <section id="contact" class="fade-in">
-      <p class="section-label">Contact</p>
-      <div class="contact-grid">
-
-        <a class="contact-item" href="mailto:yourmail@gmail.com">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg>
-          teljaouiimeryem@gmail.com
-        </a>
-
-        <a class="contact-item" href="https://linkedin.com" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="4"/><path d="M7 10v7M7 7v.01M12 10v7M12 13a3 3 0 016 0v4"/></svg>
-          LinkedIn
-        </a>
-
-        <a class="contact-item" href="tel:+212600000000">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.14 1.18a2 2 0 012-2.18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 6.91a16 16 0 006.91 6.91l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-          +212 600-083631
-        </a>
-
+  <!-- CONTACT -->
+  <section id="contact" class="contact">
+    <div class="wrap">
+      <h2>Contact</h2>
+      <p class="big">Disponible pour un entretien. Réponse sous 24 h.</p>
+      <p>E-mail : <a href="mailto:teljaouiimeryem@gmail.com">teljaouiimeryem@gmail.com</a></p>
+      <p>Téléphone : <a href="tel:+212600083631">+212 6 00 08 36 31</a></p>
+      <p>LinkedIn : <a href="https://www.linkedin.com/in/VOTRE-PROFIL" rel="noopener">linkedin.com/in/VOTRE-PROFIL</a></p>
+      <p>Basée à Marrakech, mobile à Casablanca.</p>
+      <div class="btns" style="margin-top:20px">
+        <a class="btn primary" href="CV_Teljaoui_Meryem_Audit_PFE.pdf" download>Télécharger mon CV</a>
       </div>
-    </section>
+    </div>
+  </section>
 
-  </main>
+</main>
 
-  <footer>
-    <p>© 2025 Meryem Teljaoui · Audit & Control · ENCG Oujda</p>
-  </footer>
-
-  <script>
-    // Fade-in on scroll
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry, i) => {
-        if (entry.isIntersecting) {
-          setTimeout(() => {
-            entry.target.classList.add('visible');
-          }, i * 80);
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.1 });
-
-    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-
-    // Highlight active nav link on scroll
-    const sections = document.querySelectorAll('section[id], div[id]');
-    const navLinks = document.querySelectorAll('.nav-links a');
-
-    const navObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          navLinks.forEach(link => {
-            link.style.color = '';
-            if (link.getAttribute('href') === '#' + entry.target.id) {
-              link.style.color = 'var(--purple-500)';
-            }
-          });
-        }
-      });
-    }, { rootMargin: '-40% 0px -55% 0px' });
-
-    sections.forEach(section => navObserver.observe(section));
-  </script>
+<footer>
+  <div class="wrap">© 2026 Meryem Teljaoui · Audit &amp; Contrôle · ENCG Oujda</div>
+</footer>
 
 </body>
 </html>
