@@ -5,111 +5,126 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Meryem Teljaoui | Étudiante Audit &amp; Contrôle | Portfolio</title>
 <meta name="description" content="Portfolio de Meryem Teljaoui, étudiante en 5e année Audit &amp; Contrôle à l'ENCG Oujda, à la recherche d'un stage PFE en audit financier.">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%2314284b'/><text x='50' y='66' font-size='46' text-anchor='middle' fill='white' font-family='Georgia,serif' font-weight='bold'>MT</text></svg>">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230f2347'/><text x='50' y='67' font-size='46' text-anchor='middle' fill='white' font-family='Arial' font-weight='bold'>MT</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
 
 <!--
-  ============================================================
   À REMPLACER AVANT DE PUBLIER (cherche les crochets [ ] et "VOTRE")
-  1. [MOIS 2027]            -> ta date de disponibilité
-  2. VOTRE-PROFIL           -> ton identifiant LinkedIn
-  3. [X]                    -> tes vrais chiffres (n'invente rien)
-  4. CV_Teljaoui_Meryem_Audit_PFE.pdf -> dépose ce fichier dans le même dossier que index.html
-  5. Supprime les mentions entre crochets que tu ne peux pas prouver
-  ============================================================
+  1. [MOIS 2027]  -> ta date de disponibilité
+  2. VOTRE-PROFIL -> ton identifiant LinkedIn
+  3. [X]          -> tes vrais chiffres (n'invente rien, supprime si tu ne les as pas)
+  4. CV_Teljaoui_Meryem_Audit_PFE.pdf -> à déposer dans le même dossier que index.html
 -->
 
 <style>
-  :root{
-    --ink:#14284b;
-    --text:#26324a;
-    --muted:#5b6679;
-    --line:#d5dbe6;
-    --paper:#ffffff;
-    --wash:#f1f4f9;
-    --blue:#1a4b8c;
-    --blue-dark:#123766;
-  }
-  *{box-sizing:border-box}
-  html{scroll-behavior:smooth;scroll-padding-top:72px}
-  body{
-    margin:0;background:var(--paper);color:var(--text);
-    font:17px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
-  }
-  h1,h2,h3{font-family:"Iowan Old Style","Palatino Linotype",Georgia,serif;color:var(--ink);line-height:1.2;margin:0}
-  a{color:var(--blue)}
-  a:focus-visible,.btn:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
-  .wrap{max-width:980px;margin:0 auto;padding:0 24px}
+:root{
+  --navy:#0b1d3f; --navy2:#13305f; --blue:#2457c5; --sky:#e8eefb;
+  --mark:#ffe27a; --ok:#1f8f5f; --text:#243049; --muted:#5d6980; --line:#d8deea; --paper:#fff;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--paper);color:var(--text);font:18px/1.65 "Source Sans 3",system-ui,sans-serif}
+h1,h2,h3{font-family:"Bricolage Grotesque","Source Sans 3",system-ui,sans-serif;margin:0;line-height:1.15}
+a{color:var(--blue)}
+a:focus-visible,.btn:focus-visible{outline:3px solid var(--mark);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
 
-  /* Navigation */
-  header.top{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.96);border-bottom:1px solid var(--line)}
-  header.top .wrap{display:flex;align-items:center;justify-content:space-between;min-height:60px;flex-wrap:wrap;gap:8px}
-  .logo{font-family:Georgia,serif;font-weight:700;font-size:1.25rem;color:var(--ink);text-decoration:none}
-  nav a{margin-left:20px;text-decoration:none;color:var(--text);font-size:.95rem}
-  nav a:hover{color:var(--blue);text-decoration:underline}
+/* Navigation */
+.top{position:sticky;top:0;z-index:10;background:var(--navy);color:#fff}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;min-height:58px;gap:16px}
+.logo{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:1.3rem;color:#fff;text-decoration:none;letter-spacing:.02em}
+nav{display:flex;gap:22px;overflow-x:auto;white-space:nowrap}
+nav a{color:#c9d6f2;text-decoration:none;font-size:.95rem;padding:6px 0;border-bottom:2px solid transparent}
+nav a:hover{color:#fff;border-color:var(--mark)}
 
-  /* Hero */
-  .hero{padding:72px 0 56px;border-bottom:1px solid var(--line)}
-  .hero h1{font-size:clamp(2.4rem,6vw,4rem);letter-spacing:-.01em}
-  .hero .role{font-size:1.25rem;color:var(--ink);margin:14px 0 6px;font-weight:600}
-  .hero .avail{color:var(--muted);margin:0 0 28px;max-width:60ch}
-  .btns{display:flex;gap:12px;flex-wrap:wrap}
-  .btn{display:inline-block;padding:12px 22px;border-radius:6px;text-decoration:none;font-weight:600;border:2px solid var(--blue)}
-  .btn.primary{background:var(--blue);color:#fff}
-  .btn.primary:hover{background:var(--blue-dark);border-color:var(--blue-dark)}
-  .btn.ghost{color:var(--blue);background:transparent}
-  .btn.ghost:hover{background:var(--wash)}
+/* Accueil */
+.hero{background:var(--navy);color:#fff;padding:72px 0 80px;background-image:linear-gradient(180deg,var(--navy) 0,var(--navy2) 100%)}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+.hero h1{font-size:clamp(2.6rem,6.5vw,4.6rem);font-weight:800;letter-spacing:-.02em}
+.hero h1 span{display:block}
+.hero .role{font-size:1.25rem;margin:18px 0 10px;color:#dbe5fa;font-weight:600}
+.hero .avail{margin:0 0 30px;color:#b4c3e3;max-width:46ch}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:13px 24px;border-radius:6px;font-weight:600;text-decoration:none;border:2px solid var(--mark);transition:background .2s}
+.btn.primary{background:var(--mark);color:var(--navy)}
+.btn.primary:hover{background:#fff;border-color:#fff}
+.btn.ghost{color:#fff;border-color:#6f86b8}
+.btn.ghost:hover{background:rgba(255,255,255,.1)}
 
-  /* Sections */
-  section{padding:56px 0;border-bottom:1px solid var(--line)}
-  section h2{font-size:1.9rem;margin-bottom:22px}
-  .lead{max-width:68ch;margin:0}
+/* Feuille de travail (élément signature) */
+.wp{background:#fff;color:var(--text);border-radius:6px;box-shadow:0 18px 40px rgba(0,0,0,.35);overflow:hidden;transform:rotate(1.2deg);animation:settle .7s ease-out both}
+@keyframes settle{from{opacity:0;transform:translateY(24px) rotate(3deg)}to{opacity:1;transform:rotate(1.2deg)}}
+.wp-head{display:flex;justify-content:space-between;gap:12px;background:var(--sky);padding:12px 18px;font-size:.85rem;color:var(--navy);font-weight:600;border-bottom:2px solid var(--navy)}
+.wp table{width:100%;border-collapse:collapse;font-size:.95rem}
+.wp th{text-align:left;padding:10px 18px;font-size:.8rem;color:var(--muted);font-weight:600;border-bottom:1px solid var(--line)}
+.wp td{padding:11px 18px;border-bottom:1px solid var(--line);vertical-align:top}
+.wp td:first-child{color:var(--muted);width:44px}
+.wp .tick{color:var(--ok);font-weight:700;text-align:center;width:56px}
+.wp .hl{background:var(--mark);padding:0 4px}
+.wp-foot{padding:10px 18px;font-size:.8rem;color:var(--muted)}
 
-  /* Expérience */
-  .job{display:grid;grid-template-columns:190px 1fr;gap:8px 28px;padding:20px 0;border-top:1px solid var(--line)}
-  .job:first-of-type{border-top:0}
-  .job .when{color:var(--muted);font-size:.95rem}
-  .job h3{font-size:1.15rem}
-  .job .org{color:var(--muted);margin:2px 0 8px}
-  .job ul{margin:0;padding-left:20px}
-  .job li{margin:4px 0;max-width:68ch}
+/* Sections */
+section{padding:72px 0}
+section.alt{background:var(--sky)}
+h2{font-size:2rem;font-weight:700;color:var(--navy);margin-bottom:28px;display:inline-block;border-bottom:4px solid var(--mark);padding-bottom:4px}
+.lead{max-width:66ch;margin:0 0 14px}
 
-  /* Compétences */
-  .skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:0;border:1px solid var(--line)}
-  .skill{padding:18px 20px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);margin:-0px -1px -1px 0}
-  .skill h3{font-size:1.05rem;margin-bottom:6px}
-  .skill p{margin:0;color:var(--muted);font-size:.95rem}
+/* Expérience : vraie chronologie */
+.timeline{position:relative;margin-left:8px;border-left:3px solid var(--navy);padding-left:30px}
+.job{position:relative;padding:0 0 34px}
+.job:last-child{padding-bottom:0}
+.job::before{content:"";position:absolute;left:-40px;top:6px;width:15px;height:15px;border-radius:50%;background:var(--mark);border:3px solid var(--navy)}
+.job .when{font-weight:600;color:var(--blue);font-size:.95rem}
+.job h3{font-size:1.25rem;color:var(--navy);margin:2px 0}
+.job .org{color:var(--muted);margin:0 0 8px}
+.job ul{margin:0;padding-left:20px}
+.job li{margin:4px 0;max-width:66ch}
 
-  /* Projets : présentés comme une feuille de travail */
-  .ledger{border:1px solid var(--line);border-radius:4px;overflow:hidden}
-  .row{display:grid;grid-template-columns:1.1fr 1.6fr .9fr;gap:8px 24px;padding:22px 24px;border-top:1px solid var(--line)}
-  .row:first-child{border-top:0}
-  .row:nth-child(even){background:var(--wash)}
-  .row h3{font-size:1.1rem}
-  .row .ctx{display:block;color:var(--muted);font-size:.9rem;margin-top:4px;font-family:system-ui,sans-serif;font-weight:400}
-  .row ul{margin:0;padding-left:18px}
-  .row li{margin:3px 0}
-  .meta dt{font-weight:600;font-size:.85rem;color:var(--ink)}
-  .meta dd{margin:0 0 8px;font-size:.92rem;color:var(--muted)}
-  .note{margin-top:14px;font-size:.9rem;color:var(--muted);max-width:68ch}
+/* Compétences */
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:20px}
+.skill{background:#fff;border-radius:8px;border-top:5px solid var(--blue);padding:22px;box-shadow:0 2px 10px rgba(11,29,63,.08)}
+.skill h3{font-size:1.1rem;color:var(--navy);margin-bottom:8px}
+.skill p{margin:0;color:var(--muted);font-size:.98rem}
+.skill:nth-child(3n+2){border-top-color:var(--navy)}
+.skill:nth-child(3n){border-top-color:var(--ok)}
 
-  /* Formation */
-  .two{display:grid;grid-template-columns:1fr 1fr;gap:32px}
-  .two h3{font-size:1.15rem;margin-bottom:8px}
-  .two ul{margin:0;padding-left:20px}
+/* Projets */
+.projects{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+.proj{border:2px solid var(--navy);border-radius:8px;padding:24px;background:#fff;display:flex;flex-direction:column}
+.proj .ctx{font-size:.88rem;color:var(--muted);margin:0 0 6px}
+.proj h3{font-size:1.2rem;color:var(--navy);margin-bottom:12px}
+.proj ul{margin:0 0 16px;padding-left:20px;flex:1}
+.proj li{margin:4px 0}
+.tags{display:flex;gap:8px;flex-wrap:wrap;margin:0;padding:0;list-style:none}
+.tags li{background:var(--sky);color:var(--navy);font-size:.85rem;font-weight:600;padding:3px 10px;border-radius:4px}
+.deliv{font-size:.95rem;margin:0 0 12px;padding-top:12px;border-top:1px dashed var(--line)}
+.deliv b{color:var(--navy)}
+.note{margin-top:22px;color:var(--muted);font-size:.92rem;max-width:66ch}
 
-  /* Contact */
-  .contact p{margin:6px 0}
-  .contact .big{font-size:1.1rem}
-  footer{padding:28px 0;color:var(--muted);font-size:.9rem}
+/* Formation */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:32px}
+.two h3{font-size:1.2rem;color:var(--navy);margin-bottom:4px}
+.two p{margin:0 0 8px;color:var(--muted)}
+.two ul{margin:0;padding-left:20px}
 
-  @media (max-width:760px){
-    nav a{margin:0 14px 0 0}
-    .job{grid-template-columns:1fr}
-    .row{grid-template-columns:1fr}
-    .two{grid-template-columns:1fr}
-    .hero{padding:48px 0 40px}
-  }
-  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+/* Contact */
+.contact{background:var(--navy);color:#fff}
+.contact h2{color:#fff}
+.contact a{color:var(--mark)}
+.contact p{margin:6px 0}
+.contact .big{font-family:"Bricolage Grotesque",sans-serif;font-size:1.5rem;margin-bottom:18px}
+.contact .btn.primary{color:var(--navy)}
+footer{background:#07142c;color:#8fa2c8;padding:20px 0;font-size:.9rem}
+
+@media (max-width:820px){
+  .hero .wrap{grid-template-columns:1fr;gap:36px}
+  .wp{transform:none;animation:none}
+  .projects,.two{grid-template-columns:1fr}
+  section{padding:52px 0}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.wp{animation:none}}
 </style>
 </head>
 
@@ -131,236 +146,220 @@
 
 <main>
 
-  <!-- ACCUEIL -->
-  <div class="hero" id="accueil">
-    <div class="wrap">
-      <h1>Meryem Teljaoui</h1>
+<!-- ACCUEIL -->
+<div class="hero" id="accueil">
+  <div class="wrap">
+    <div>
+      <h1><span>Meryem</span><span>Teljaoui</span></h1>
       <p class="role">Étudiante en 5<sup>e</sup> année Audit &amp; Contrôle, ENCG Oujda</p>
-      <p class="avail">Je recherche un stage PFE de 6 mois en audit financier, à partir de [MOIS 2027]. Basée à Marrakech, mobile à Casablanca.</p>
+      <p class="avail">Je recherche un stage PFE en audit financier, à partir du mois Janvier.</p>
       <div class="btns">
         <a class="btn primary" href="CV_Teljaoui_Meryem_Audit_PFE.pdf" download>Télécharger mon CV</a>
         <a class="btn ghost" href="#contact">Me contacter</a>
       </div>
     </div>
-  </div>
 
-  <!-- À PROPOS -->
-  <section id="apropos">
-    <div class="wrap">
-      <h2>À propos</h2>
-      <p class="lead">Étudiante en 5<sup>e</sup> année Audit &amp; Contrôle à l'ENCG Oujda, j'ai effectué trois stages (cabinet comptable, Direction Générale des Impôts, FRITAM) et fondé le Club ORCA, dédié à l'audit, au contrôle et à la conformité.</p>
-      <p class="lead">Je maîtrise l'approche par les risques, le contrôle interne (référentiel COSO) et l'analyse de données sous Excel et Power BI. Je cherche un stage PFE en audit financier pour participer à des missions de revue analytique, de leadsheets et de circularisations.</p>
+    <div class="wp" aria-label="Résumé du profil sous forme de feuille de travail">
+      <div class="wp-head"><span>Feuille de synthèse : profil candidate</span><span>Réf. MT</span></div>
+      <table>
+        <thead><tr><th>Réf.</th><th>Rubrique</th><th style="text-align:center">Pointé</th></tr></thead>
+        <tbody>
+          <tr><td>A</td><td>5<sup>e</sup> année Audit &amp; Contrôle, <span class="hl">ENCG Oujda</span></td><td class="tick">✓</td></tr>
+          <tr><td>B</td><td>3 stages : cabinet comptable, DGI, FRITAM</td><td class="tick">✓</td></tr>
+          <tr><td>C</td><td>Fondatrice du Club ORCA (audit et conformité)</td><td class="tick">✓</td></tr>
+          <tr><td>D</td><td>Contrôle interne COSO, Excel, Power BI</td><td class="tick">✓</td></tr>
+          <tr><td>E</td><td>Disponible : <span class="hl">[MOIS 2027]</span>, PFE de 6 mois</td><td class="tick">✓</td></tr>
+        </tbody>
+      </table>
+      <div class="wp-foot">✓ = vérifié sur ce portfolio et sur le CV</div>
     </div>
-  </section>
+  </div>
+</div>
 
-  <!-- EXPÉRIENCE -->
-  <section id="experience">
-    <div class="wrap">
-      <h2>Expérience</h2>
+<!-- À PROPOS -->
+<section id="apropos">
+  <div class="wrap">
+    <h2>À propos</h2>
+    <p class="lead">Étudiante en 5<sup>e</sup> année Audit &amp; Contrôle à l'ENCG Oujda, j'ai effectué trois stages (cabinet comptable, Direction Générale des Impôts, FRITAM) et fondé le Club ORCA, dédié à l'audit, au contrôle et à la conformité.</p>
+    <p class="lead">Je maîtrise l'approche par les risques, le contrôle interne (référentiel COSO) et l'analyse de données sous Excel et Power BI. Je cherche un stage PFE en audit financier pour participer à des missions de revue analytique, de leadsheets et de circularisations.</p>
+  </div>
+</section>
+
+<!-- EXPÉRIENCE -->
+<section id="experience" class="alt">
+  <div class="wrap">
+    <h2>Expérience</h2>
+    <div class="timeline">
 
       <div class="job">
         <div class="when">Juin – août 2026</div>
-        <div>
-          <h3>Stage d'approfondissement</h3>
-          <p class="org">FRITAM, société exportatrice de fruits et légumes frais et congelés</p>
-          <ul>
-            <li>Cartographie des procédures [achats / stocks / trésorerie : garde seulement celles que tu as vues] et identification de [X] risques de contrôle interne.</li>
-            <li>Étude des pratiques de contrôle et de suivi documentaire sur les opérations de l'entreprise.</li>
-            <li>Rédaction d'un rapport de stage appliquant une démarche d'audit fondée sur les risques.</li>
-          </ul>
-        </div>
+        <h3>Stage d'approfondissement</h3>
+        <p class="org">FRITAM, société exportatrice de fruits et légumes frais et congelés</p>
+        <ul>
+          <li>Cartographie des procédures [achats / stocks / trésorerie : garde seulement celles que tu as vues] et identification de [X] risques de contrôle interne.</li>
+          <li>Étude des pratiques de contrôle et de suivi documentaire sur les opérations de l'entreprise.</li>
+          <li>Rédaction d'un rapport de stage appliquant une démarche d'audit fondée sur les risques.</li>
+        </ul>
       </div>
 
       <div class="job">
         <div class="when">Juillet 2025</div>
-        <div>
-          <h3>Stagiaire</h3>
-          <p class="org">Direction Générale des Impôts, Marrakech (Targa)</p>
-          <ul>
-            <li>Analyse de [X] dossiers fiscaux dans les services de l'assiette et du recouvrement.</li>
-            <li>Suivi du recouvrement des créances fiscales et des dossiers.</li>
-            <li>Application de la réglementation fiscale marocaine.</li>
-          </ul>
-        </div>
+        <h3>Stagiaire</h3>
+        <p class="org">Direction Générale des Impôts, Marrakech (Targa)</p>
+        <ul>
+          <li>Analyse de [X] dossiers fiscaux dans les services de l'assiette et du recouvrement.</li>
+          <li>Suivi du recouvrement des créances fiscales et des dossiers.</li>
+          <li>Application de la réglementation fiscale marocaine.</li>
+        </ul>
       </div>
 
       <div class="job">
         <div class="when">Juillet 2024</div>
-        <div>
-          <h3>Stagiaire en comptabilité</h3>
-          <p class="org">Fiduciaire Benhassi</p>
-          <ul>
-            <li>Saisie de [X] écritures comptables sur Topaz.</li>
-            <li>Préparation de déclarations de TVA pour [X] dossiers.</li>
-            <li>Contrôle de [X] pièces justificatives et de leur conformité.</li>
-          </ul>
-        </div>
+        <h3>Stagiaire en comptabilité</h3>
+        <p class="org">Fiduciaire Benhassi</p>
+        <ul>
+          <li>Saisie de [X] écritures comptables sur Topaz.</li>
+          <li>Préparation de déclarations de TVA pour [X] dossiers.</li>
+          <li>Contrôle de [X] pièces justificatives et de leur conformité.</li>
+        </ul>
       </div>
 
       <div class="job">
         <div class="when">Depuis [année]</div>
-        <div>
-          <h3>Fondatrice et présidente</h3>
-          <p class="org">Club ORCA, ENCG Oujda (audit, contrôle et conformité)</p>
-          <ul>
-            <li>Création et animation du club : [X] membres, [X] ateliers, [X] visites professionnelles.</li>
-            <li>Échanges avec des professionnels du secteur : [cabinets / entreprises, si tu peux les citer].</li>
-          </ul>
-        </div>
+        <h3>Fondatrice et présidente</h3>
+        <p class="org">Club ORCA, ENCG Oujda (audit, contrôle et conformité)</p>
+        <ul>
+          <li>Création et animation du club : [X] membres, [X] ateliers, [X] visites professionnelles.</li>
+          <li>Échanges avec des professionnels du secteur : [cabinets / entreprises, si tu peux les citer].</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- COMPÉTENCES -->
+<section id="competences">
+  <div class="wrap">
+    <h2>Compétences</h2>
+    <div class="skills">
+      <div class="skill"><h3>Audit et contrôle interne</h3><p>Approche par les risques, assertions d'audit, matérialité, référentiel COSO, matrices de risques.</p></div>
+      <div class="skill"><h3>Cycles étudiés</h3><p>Trésorerie, immobilisations, capitaux propres. Revue analytique et documentation des tests.</p></div>
+      <div class="skill"><h3>Excel</h3><p>Tableaux croisés dynamiques, RECHERCHEX, [ajoute seulement ce que tu sais faire].</p></div>
+      <div class="skill"><h3>Power BI</h3><p>Tableau de bord d'indicateurs d'audit et de risques (voir projets).</p></div>
+      <div class="skill"><h3>Comptabilité et fiscalité</h3><p>Topaz, saisie comptable, TVA, [CGNC si maîtrisé].</p></div>
+      <div class="skill"><h3>Langues</h3><p>Arabe (langue maternelle), anglais C1, français [ton niveau réel]. Notions : espagnol, allemand, mandarin.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJETS -->
+<section id="projets" class="alt">
+  <div class="wrap">
+    <h2>Projets</h2>
+    <div class="projects">
+
+      <article class="proj">
+        <p class="ctx">Cas pratique académique, [matière], [année]</p>
+        <h3>Analyse de processus et identification des risques</h3>
+        <ul>
+          <li>Analyse des activités, des flux et des points de contrôle d'un processus.</li>
+          <li>Identification des risques opérationnels, financiers et de conformité, et de leur impact sur les objectifs.</li>
+        </ul>
+        <p class="deliv"><b>Livrable :</b> [X] risques identifiés, schéma du processus</p>
+        <ul class="tags"><li>Excel</li><li>Risques</li></ul>
+        <!-- Ajoute ici : <a href="projets/processus.pdf">Voir le schéma</a> -->
+      </article>
+
+      <article class="proj">
+        <p class="ctx">Cas pratique académique, [année]</p>
+        <h3>Matrice des risques et dispositif de contrôle interne</h3>
+        <ul>
+          <li>Classement des risques selon leur probabilité et leur impact.</li>
+          <li>Définition de mesures de contrôle préventives et détectives pour les risques critiques.</li>
+        </ul>
+        <p class="deliv"><b>Livrable :</b> matrice de [X] risques sur [X] niveaux de criticité</p>
+        <ul class="tags"><li>Excel</li><li>Contrôle interne</li></ul>
+        <!-- Ajoute ici : <a href="projets/matrice-risques.png">Voir la matrice</a> -->
+      </article>
+
+      <article class="proj">
+        <p class="ctx">Cas pratique académique, [année]</p>
+        <h3>Évaluation du contrôle interne selon COSO</h3>
+        <ul>
+          <li>Analyse des cinq composantes : environnement de contrôle, évaluation des risques, activités de contrôle, information et communication, pilotage.</li>
+          <li>Identification des points forts et des faiblesses, et de leurs effets sur la fiabilité des processus.</li>
+        </ul>
+        <p class="deliv"><b>Livrable :</b> tableau d'évaluation des 5 composantes</p>
+        <ul class="tags"><li>COSO</li><li>Contrôle interne</li></ul>
+        <!-- Ajoute ici : <a href="projets/coso.pdf">Voir le tableau</a> -->
+      </article>
+
+      <article class="proj">
+        <p class="ctx">Cas pratique académique, [année]</p>
+        <h3>Normes ISA : application à un cas d'audit</h3>
+        <ul>
+          <li>Application des normes ISA à un cas : évaluation des risques, contrôle interne, éléments probants, documentation, matérialité.</li>
+          <li>Rédaction de procédures d'audit adaptées aux risques identifiés.</li>
+        </ul>
+        <p class="deliv"><b>Livrable :</b> [fiche de synthèse ou papier de travail]</p>
+        <ul class="tags"><li>Normes ISA</li><li>Audit</li></ul>
+        <!-- Ajoute ici : <a href="projets/isa.pdf">Voir la fiche</a> -->
+      </article>
+
+      <article class="proj">
+        <p class="ctx">Projet personnel, [année]</p>
+        <h3>Tableau de bord d'audit sous Power BI</h3>
+        <ul>
+          <li>Visualisation d'indicateurs d'audit et de risques à partir de données [fictives ou anonymisées].</li>
+          <li>Mise en forme de visuels interactifs pour présenter des constats.</li>
+        </ul>
+        <p class="deliv"><b>Livrable :</b> tableau de bord de [X] indicateurs</p>
+        <ul class="tags"><li>Power BI</li><li>Data</li></ul>
+        <!-- Ajoute ici : <a href="projets/powerbi.png">Voir la capture</a> -->
+      </article>
+
+    </div>
+    <p class="note">Les cas présentés sont académiques ou fondés sur des données fictives ou anonymisées. Aucune donnée confidentielle d'entreprise n'est publiée.</p>
+  </div>
+</section>
+
+<!-- FORMATION -->
+<section id="formation">
+  <div class="wrap">
+    <h2>Formation</h2>
+    <div class="two">
+      <div>
+        <h3>ENCG Oujda, Cycle Grande École</h3>
+        <p>2022 – 2027, filière Audit &amp; Contrôle</p>
+        <ul>
+          <li>Audit légal et contractuel</li>
+          <li>Contrôle interne</li>
+          <li>[Autres matières clés]</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Baccalauréat</h3>
+        <p>Sciences Physiques, mention Très Bien, 2022</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- COMPÉTENCES -->
-  <section id="competences">
-    <div class="wrap">
-      <h2>Compétences</h2>
-      <div class="skills">
-        <div class="skill">
-          <h3>Audit et contrôle interne</h3>
-          <p>Approche par les risques, assertions d'audit, matérialité, référentiel COSO, matrices de risques.</p>
-        </div>
-        <div class="skill">
-          <h3>Cycles étudiés</h3>
-          <p>Trésorerie, immobilisations, capitaux propres. Revue analytique et documentation des tests.</p>
-        </div>
-        <div class="skill">
-          <h3>Excel</h3>
-          <p>Tableaux croisés dynamiques, RECHERCHEX, [ajoute seulement ce que tu sais faire].</p>
-        </div>
-        <div class="skill">
-          <h3>Power BI</h3>
-          <p>Tableau de bord d'indicateurs d'audit et de risques (voir projets).</p>
-        </div>
-        <div class="skill">
-          <h3>Comptabilité et fiscalité</h3>
-          <p>Topaz, saisie comptable, TVA, [CGNC si maîtrisé].</p>
-        </div>
-        <div class="skill">
-          <h3>Langues</h3>
-          <p>Arabe (langue maternelle), anglais C1, français [ton niveau réel]. Notions : espagnol, allemand, mandarin.</p>
-        </div>
-      </div>
+<!-- CONTACT -->
+<section id="contact" class="contact">
+  <div class="wrap">
+    <h2>Contact</h2>
+    <p class="big">Disponible pour un entretien. Réponse sous 24 h.</p>
+    <p>E-mail : <a href="mailto:teljaouiimeryem@gmail.com">teljaouiimeryem@gmail.com</a></p>
+    <p>Téléphone : <a href="tel:+212600083631">+212 6 00 08 36 31</a></p>
+    <p>LinkedIn : <a href="https://www.linkedin.com/in/VOTRE-PROFIL" rel="noopener">linkedin.com/in/VOTRE-PROFIL</a></p>
+    <p>Basée à Marrakech, mobile à Casablanca.</p>
+    <div class="btns" style="margin-top:22px">
+      <a class="btn primary" href="CV_Teljaoui_Meryem_Audit_PFE.pdf" download>Télécharger mon CV</a>
     </div>
-  </section>
-
-  <!-- PROJETS -->
-  <section id="projets">
-    <div class="wrap">
-      <h2>Projets</h2>
-      <div class="ledger">
-
-        <article class="row">
-          <h3>Analyse de processus et identification des risques
-            <span class="ctx">Cas pratique académique, [matière], [année]</span></h3>
-          <ul>
-            <li>Analyse des activités, des flux et des points de contrôle d'un processus.</li>
-            <li>Identification des risques opérationnels, financiers et de conformité, et de leur impact sur les objectifs.</li>
-          </ul>
-          <dl class="meta">
-            <dt>Livrable</dt><dd>[X] risques identifiés, schéma du processus</dd>
-            <dt>Outils</dt><dd>Excel</dd>
-          </dl>
-          <!-- Ajoute ici un lien vers ton schéma : <a href="projets/processus.pdf">Voir le schéma</a> -->
-        </article>
-
-        <article class="row">
-          <h3>Matrice des risques et dispositif de contrôle interne
-            <span class="ctx">Cas pratique académique, [année]</span></h3>
-          <ul>
-            <li>Classement des risques selon leur probabilité et leur impact.</li>
-            <li>Définition de mesures de contrôle préventives et détectives pour les risques critiques.</li>
-          </ul>
-          <dl class="meta">
-            <dt>Livrable</dt><dd>Matrice de [X] risques sur [X] niveaux de criticité</dd>
-            <dt>Outils</dt><dd>Excel</dd>
-          </dl>
-          <!-- Ajoute ici : <a href="projets/matrice-risques.png">Voir la matrice</a> -->
-        </article>
-
-        <article class="row">
-          <h3>Évaluation du contrôle interne selon COSO
-            <span class="ctx">Cas pratique académique, [année]</span></h3>
-          <ul>
-            <li>Analyse des cinq composantes : environnement de contrôle, évaluation des risques, activités de contrôle, information et communication, pilotage.</li>
-            <li>Identification des points forts et des faiblesses, et de leurs effets sur la fiabilité des processus.</li>
-          </ul>
-          <dl class="meta">
-            <dt>Livrable</dt><dd>Tableau d'évaluation des 5 composantes</dd>
-            <dt>Référentiel</dt><dd>COSO</dd>
-          </dl>
-          <!-- Ajoute ici : <a href="projets/coso.pdf">Voir le tableau</a> -->
-        </article>
-
-        <article class="row">
-          <h3>Normes ISA : application à un cas d'audit
-            <span class="ctx">Cas pratique académique, [année]</span></h3>
-          <ul>
-            <li>Application des normes ISA à un cas : évaluation des risques, contrôle interne, éléments probants, documentation, matérialité.</li>
-            <li>Rédaction de procédures d'audit adaptées aux risques identifiés.</li>
-          </ul>
-          <dl class="meta">
-            <dt>Livrable</dt><dd>[fiche de synthèse ou papier de travail]</dd>
-            <dt>Référentiel</dt><dd>Normes ISA</dd>
-          </dl>
-          <!-- Ajoute ici : <a href="projets/isa.pdf">Voir la fiche</a> -->
-        </article>
-
-        <article class="row">
-          <h3>Tableau de bord d'audit sous Power BI
-            <span class="ctx">Projet personnel, [année]</span></h3>
-          <ul>
-            <li>Visualisation d'indicateurs d'audit et de risques à partir de données [fictives ou anonymisées].</li>
-            <li>Mise en forme de visuels interactifs pour présenter des constats.</li>
-          </ul>
-          <dl class="meta">
-            <dt>Livrable</dt><dd>Tableau de bord de [X] indicateurs</dd>
-            <dt>Outils</dt><dd>Power BI</dd>
-          </dl>
-          <!-- Ajoute ici : <a href="projets/powerbi.png">Voir la capture</a> -->
-        </article>
-
-      </div>
-      <p class="note">Les cas présentés sont académiques ou fondés sur des données fictives ou anonymisées. Aucune donnée confidentielle d'entreprise n'est publiée.</p>
-    </div>
-  </section>
-
-  <!-- FORMATION -->
-  <section id="formation">
-    <div class="wrap">
-      <h2>Formation</h2>
-      <div class="two">
-        <div>
-          <h3>ENCG Oujda, Cycle Grande École</h3>
-          <p>2022 – 2027, filière Audit &amp; Contrôle</p>
-          <ul>
-            <li>Audit légal et contractuel</li>
-            <li>Contrôle interne</li>
-            <li>[Autres matières clés]</li>
-          </ul>
-        </div>
-        <div>
-          <h3>Baccalauréat</h3>
-          <p>Sciences Physiques, mention Très Bien, 2022</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact" class="contact">
-    <div class="wrap">
-      <h2>Contact</h2>
-      <p class="big">Disponible pour un entretien. Réponse sous 24 h.</p>
-      <p>E-mail : <a href="mailto:teljaouiimeryem@gmail.com">teljaouiimeryem@gmail.com</a></p>
-      <p>Téléphone : <a href="tel:+212600083631">+212 6 00 08 36 31</a></p>
-      <p>LinkedIn : <a href="https://www.linkedin.com/in/VOTRE-PROFIL" rel="noopener">linkedin.com/in/VOTRE-PROFIL</a></p>
-      <p>Basée à Marrakech, mobile à Casablanca.</p>
-      <div class="btns" style="margin-top:20px">
-        <a class="btn primary" href="CV_Teljaoui_Meryem_Audit_PFE.pdf" download>Télécharger mon CV</a>
-      </div>
-    </div>
-  </section>
+  </div>
+</section>
 
 </main>
 
@@ -370,3 +369,4 @@
 
 </body>
 </html>
+  
